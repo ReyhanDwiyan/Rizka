@@ -1,67 +1,57 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Ubah ini dari center ke flex-start */
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
 }
 
-.container {
-    position: relative;
-    width: 300px;
-    height: 400px;
-    overflow: hidden;
+.card-container {
+  position: relative;
+  width: 300px; /* Tetapkan lebar tetap jika diinginkan */
+  margin-top: 5px; /* Jarak 5px dari atas halaman */
 }
 
 .card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    opacity: 0;
-    transition: opacity 0.5s;
-    padding: 20px;
-    box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  min-height: 200px; /* Menetapkan tinggi minimum jika diperlukan */
+  max-width: 100%; /* Pastikan card tidak melebihi container */
 }
 
 .card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+  max-width: 100%;
+  height: auto; /* Memastikan gambar mempertahankan aspek rasio */
+  border-radius: 10px;
 }
 
 .card p {
-    margin: 16px 0 0;
-    font-size: 18px;
-    color: #333;
-    flex-grow: 1;
+  margin: 10px 0;
+  text-align: center;
 }
 
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.card button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-.card.show {
-    opacity: 1;
+.card button:hover {
+  background-color: #0056b3;
 }
